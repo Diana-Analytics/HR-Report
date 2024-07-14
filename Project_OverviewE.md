@@ -4,7 +4,7 @@
 This project utilizes SQL to extract and analyze HR data, uncovering valuable insights and answering key business questions. The findings are then visualized using Power Bi, creating interactive dashboards that showcase HR metrics and insights that provides a comprehensive understanding of the company's HR landscape
 
 ### Data sources:
-The primary dataset used for this analysis is the "HRData.xlsx" dataset
+The primary dataset used for this analysis is the "HRData.csv" dataset
 
 ### Tools Used:
 - SQL Server
