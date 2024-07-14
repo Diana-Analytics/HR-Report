@@ -210,6 +210,31 @@ Select *,
 round((Hirees_Count-terminations)/cast(Hirees_Count as float),2)*100 Percent_Hire_change from cte
 order by 1
 
+--After creating the queries views can be created for later visuaztions.
+--Creating Views For Visualization for example:
+--Age group Distribution
+
+Create View Age_Group_Distribution as
+with cte as
+(
+select age, case when age <30 Then 'Youth'
+when age <40 Then 'Young_Professionals' 
+When age< 50 Then 'Matured_Professionals'
+Else 'Executive'
+End Age_Group,
+case when age <30 Then 1
+when age <40 Then 2 
+When age< 50 Then 3
+Else 4
+End Age_num
+from HRData
+where termination_date is null
+)
+
+Select Age_Group,
+count(*)Age_Group_Cnt 
+from cte
+group by Age_Group, age_num
 
 
 
